@@ -71,6 +71,7 @@ nav {
     padding: 20px 0;
     align-items: center;
     background-color: transparent;
+    min-height: 8vh;
 }
 
 nav ul li {
@@ -132,13 +133,16 @@ a {
 }
 
 .mainBtn {
-    display: grid;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px 50px;
     width: 110px;
-    border: #9100FF 1.5px solid;
-    font-size: 1.2rem;
-    font-weight: 500;
+    border: #9100FF 1px solid;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 800;
     text-transform: uppercase;
     background: none;
     cursor: pointer;
@@ -199,7 +203,6 @@ nav ul li:hover .nav-underline {
 #aboutUs{
     background: url('../DevelopAssets/aboutSection.svg') no-repeat 100% 100%;
     color: #000000;
-    height: 1000px;
 }
 
 .container {
@@ -243,14 +246,16 @@ nav ul li:hover .nav-underline {
 }
 
 .values {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin-bottom: 200px;
+    display: flex;
+    justify-content: space-around;
 }
 
-.center, .right {
-    margin-left: 10px;
+.values div { 
+    margin-top: 30px;
+    flex: 1;
 }
+
+
 
 .values .title, .values .text {
     margin: 10px 0;
@@ -272,13 +277,11 @@ nav ul li:hover .nav-underline {
 #services {
     background: url('../DevelopAssets/servicesSection.svg') no-repeat 100% 100%;
     color: #000000;
-    height: 1600px;
 }
 
 
 
 .it-services {
-    position: relative;
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, 30%);
@@ -324,17 +327,16 @@ nav ul li:hover .nav-underline {
 /* -----------------------------------  Contact Section  -----------------------------------  */
 .contactSection {
     background-color: #eeeeee;
-    height: 1000px;
+    /* height: 1000px; */
 }
 
 #contactUs {
-    /* position: relative; */
-    width: 800px;
-    height: 1000px;
+    width: 60%;
     background-color: #ffffff;
-    /* right: 50%; */
-    transform: translateY(-20%);
+    padding: 40px;
+    transform: translateY(-25%);
     margin: 0 auto;
+    border-radius: 8px;
     -webkit-box-shadow: -4px 4px 10px 0px rgba(0,0,0,0.33);
     -moz-box-shadow: -4px 4px 10px 0px rgba(0,0,0,0.33);
     box-shadow: -4px 4px 10px 0px rgba(0,0,0,0.33);
@@ -348,13 +350,15 @@ nav ul li:hover .nav-underline {
     font-weight: 800;
     text-transform: capitalize;
     text-align: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
 }
 
 .page {
     /* position: relative; */
     /* top: 20%; */
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
 }
 
 .page label {
@@ -366,14 +370,262 @@ nav ul li:hover .nav-underline {
 
 
 .sendBtn {
-  text-align: center;
-  top: 32%;
-  color: #000000;    
-  margin: 0 auto;  
+    display: grid;
+    position: relative;
+    text-align: center;
+    color: #000000;    
+    margin: 40px auto;  
+    padding: 15px 50px;
+    width: 110px;
+    border: #9100FF 1px solid;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: none;
+    cursor: pointer;
+}
+
+.sendBtn:hover .btn-background-hover {
+    width: 110px;
+    z-index: 0;
+    padding: 0px 50px;
+    
+}
+
+.sendBtn:hover a {
+    z-index: 1 ;
+    color: #ffffff;
 }
 
 .sendBtn a {
   color: #000000;
+}
+
+.menuToggle div{
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+.menuToggle {
+    display: none;
+}
+
+.footer-wrapper {
+    width: 100%;
+    background-color: #dcdcdc;
+    min-height: 10vh;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.footer .copy {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.footer .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.footer .social-media .facebook-logo, .footer .social-media .instagram-logo, .footer .social-media .youtube-logo {
+    margin-right: 20px;
+}
+
+.footer .prom {
+    margin: 0 auto;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer .prom p{
+    display: flex;
+    align-items: center;
+}
+
+.footer .prom a{
+    color: black;
+}
+
+.footer .prom a:hover {
+    color: #9100FF ;
+}
+
+.footer .heart {
+    color: red;
+}
+
+
+
+@media(max-width: 900px) {
+
+    body {
+        overflow-x: hidden;
+        font-size: 16px;
+    }
+
+    #loading {
+        display: none;
+    }
+
+    #home {
+        background: #131213;
+    }
+
+    .navbar {
+        position: fixed;
+    }
+    .logo {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px !important;
+    }
+
+    .mainBtn {
+        padding: 10px 30px;
+    }
+    .mainBtn a {
+        font-size: 18px;
+    }
+
+    
+
+
+    nav ul {
+        position: absolute;
+        right: 0px;
+        height: 94vh;
+        top: 9.5vh;
+        background-color: #131213;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform .5s ease-in;
+        z-index: 1;
+    }
+
+    nav ul li {
+        opacity: 0;
+    }
+
+    nav ul li a {
+        color: #ffffff;
+    }
+    .menuToggle {
+        cursor: pointer;
+        display: block;
+    }
+
+    #aboutUs {
+        /* height: 100vh; */
+        background: #f1f5fb !important;
+    }
+
+    #aboutUs .values {
+        flex-direction: column;
+    }
+
+    #services {
+        background: #dcdcdc;
+    }
+    #services .it-services {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .note {
+        margin-top: 20px;
+        margin: 0px;
+        align-items: center;
+    }
+
+    .note-7 {
+        width: 80%;
+        margin-top: 20px;
+        padding-bottom: 30px;
+    }
+    .note-7 .note-img {
+        width: 25px;
+    
+    }
+    
+    .note-7 .note h4 {
+        margin: auto 0;
+    }
+    
+    
+    .note-7 .note p {
+        grid-column-start: 2;
+    }
+
+    
+
+    .contactSection {
+        padding: 60px 0;
+    }
+
+    #contactUs {
+        width: 80%;
+        transform: translateX(0);
+        margin: 60px auto;
+    }
+    
+
+    
+    
+}
+
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 { 
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
   
