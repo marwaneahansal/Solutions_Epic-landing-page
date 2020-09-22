@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="./css/formStyle.css">
 </head>
 <body>
-    <div id="landing">
+    <div id="loading">
+        <img src="./DevelopAssets/ring.png" alt="loading logo">
+    </div>
 
-        <!-- -----------------------------------  Home Section  -----------------------------------  -->
-        <div id="home">
+    <div id="landing" class="anime">
+        <div class="navbar">
             <nav>
                 <a href="#" class="logo">Solutions Epic</a>
                 <ul>
@@ -23,7 +25,12 @@
                     <li><a href="#contactUs">Contact Us<span class="nav-underline"></span></a></li>
                 </ul>
             </nav>
-            <main>
+        </div>
+        <!-- -----------------------------------  Home Section  -----------------------------------  -->
+        <div id="home">
+            
+            
+            <main class="homeSection">
                 <div class="section1">
                     <h1 class="mainText">Solutions Epic - IT solutions<br> and service company</h1>
                     <h4 class="smallText">Solutions Epic constantly advances to provide innovative IT solutions<br> 
@@ -217,5 +224,9 @@
 
 
     </div>
+
+
+    <script src="./index.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 </body>
 </html>
