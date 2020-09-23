@@ -67,11 +67,12 @@ html {
 nav {
     display: flex;
     justify-content: space-between;
-    margin: 0 10%;
+    margin: 0 auto;
     padding: 20px 0;
     align-items: center;
     background-color: transparent;
     min-height: 8vh;
+    width: 80%;
 }
 
 nav ul li {
@@ -139,12 +140,12 @@ a {
     align-items: center;
     padding: 15px 50px;
     width: 110px;
+    background-color: #131213;
     border: #9100FF 1px solid;
     border-radius: 5px;
     font-size: 1.3rem;
     font-weight: 800;
     text-transform: uppercase;
-    background: none;
     cursor: pointer;
 }
 
@@ -203,6 +204,7 @@ nav ul li:hover .nav-underline {
 #aboutUs{
     background: url('../DevelopAssets/aboutSection.svg') no-repeat 100% 100%;
     color: #000000;
+    min-height: 1000px;
 }
 
 .container {
@@ -277,6 +279,7 @@ nav ul li:hover .nav-underline {
 #services {
     background: url('../DevelopAssets/servicesSection.svg') no-repeat 100% 100%;
     color: #000000;
+    min-height: 1350px;
 }
 
 
@@ -449,17 +452,18 @@ nav ul li:hover .nav-underline {
 
 .footer .prom {
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.footer .prom p {
     display: flex;
     align-items: center;
 }
 
-.footer .prom p{
-    display: flex;
-    align-items: center;
-}
-
-.footer .prom a{
+.footer .prom a {
     color: black;
 }
 
@@ -490,6 +494,12 @@ nav ul li:hover .nav-underline {
 
     .navbar {
         position: fixed;
+        z-index: 10;
+        background-color: #1f1f1f !important;
+    }
+
+    .contactBtn:hover .btn-background-hover {
+        width: 70px !important;
     }
     .logo {
         font-size: 20px;
@@ -518,15 +528,15 @@ nav ul li:hover .nav-underline {
         right: 0px;
         height: 94vh;
         top: 9.5vh;
-        background-color: #131213;
+        background-color: #1f1f1f;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         width: 50%;
-        transform: translateX(100%);
+        transform: translateX(100%) !important;
         transition: transform .5s ease-in;
-        z-index: 1;
+        z-index: 100;
     }
 
     nav ul li {
@@ -537,6 +547,7 @@ nav ul li:hover .nav-underline {
         color: #ffffff;
     }
     .menuToggle {
+        z-index: 1000;
         cursor: pointer;
         display: block;
     }
@@ -566,7 +577,7 @@ nav ul li:hover .nav-underline {
 
     .note-7 {
         width: 80%;
-        margin-top: 20px;
+        margin-top: 50px;
         padding-bottom: 30px;
     }
     .note-7 .note-img {
@@ -586,13 +597,30 @@ nav ul li:hover .nav-underline {
     
 
     .contactSection {
-        padding: 60px 0;
+        padding: 60px 0 0 0;
     }
 
     #contactUs {
         width: 80%;
         transform: translateX(0);
         margin: 60px auto;
+    }
+    
+    #contactUs .page {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer .copy {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footer .copy .copyright {
+        margin-bottom: 20px;
     }
     
 
@@ -602,7 +630,7 @@ nav ul li:hover .nav-underline {
 
 
 .nav-active {
-    transform: translateX(0%);
+    transform: translateX(0%) !important;
 }
 
 @keyframes navLinkFade {
